@@ -1,0 +1,121 @@
+{
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "name": "projects",
+      "path": "data/dribdat-projects.csv",
+      "profile": "tabular-data-resource",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "UTF-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "updated",
+            "type": "date",
+            "format": "%d.%m.%y",
+            "description": "Timestamp of last update to the project"
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "format": "uri",
+            "description": "A link to the project page"
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "description": "Title of the project page"
+          },
+          {
+            "name": "score",
+            "type": "integer",
+            "format": "default",
+            "description": "Numerical progress rating score"
+          },
+          {
+            "name": "phase",
+            "type": "string",
+            "description": "The name of the status phase of the project or challenge"
+          },
+          {
+            "name": "progress",
+            "type": "integer",
+            "description": "The numerical status phase of the project or challenge"
+          },
+          {
+            "name": "summary",
+            "type": "string",
+            "description": "Plain text project description"
+          },
+          {
+            "name": "hashtag",
+            "type": "string",
+            "description": "A hashtag for this project on social media"
+          },
+          {
+            "name": "contact_url",
+            "type": "string",
+            "format": "uri",
+            "description": "Link for getting in touch with the team"
+          },
+          {
+            "name": "image_url",
+            "type": "string",
+            "format": "uri",
+            "description": "Link to an image file"
+          },
+          {
+            "name": "source_url",
+            "type": "string",
+            "format": "uri",
+            "description": "Link to the source code"
+          },
+          {
+            "name": "webpage_url",
+            "type": "string",
+            "format": "uri",
+            "description": "Link to the demo or pitch"
+          },
+          {
+            "name": "maintainer",
+            "type": "string",
+            "description": "Username of the person who created the project page"
+          },
+          {
+            "name": "event_url",
+            "type": "string",
+            "format": "uri",
+            "description": "A link to the event home page"
+          },
+          {
+            "name": "event_name",
+            "type": "string",
+            "description": "Name of the event at which this project was worked on"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    "opendata", "hackathon"
+  ],
+  "name": "hackopendata-archive",
+  "description": "Swiss open data hackathon project archive",
+  "title": "hack.opendata.ch project archive",
+  "licenses": [
+    {
+      "title": "CC Attribution-Share Alike 4.0 International",
+      "path": "http://creativecommons.org/licenses/by-sa/4.0/)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Generated in dribdat",
+      "path": "https://dribdat.cc"
+    }
+  ]
+}
