@@ -2,8 +2,225 @@
   "profile": "tabular-data-package",
   "resources": [
     {
-      "name": "projects",
-      "path": "data/dribdat-projects.csv",
+      "path": "data/hackopendata-projects.csv",
+      "pathType": "local",
+      "name": "Archive of hack.opendata.ch projects",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "UTF-8",
+      "dialect": {
+        "delimiter": ",",
+        "quoteChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "format": "uri",
+            "description": "A link to the project page"
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "format": "default",
+            "description": "Title of the project page"
+          },
+          {
+            "name": "team",
+            "type": "string",
+            "format": "default",
+            "description": "Names of team members"
+          },
+          {
+            "name": "score",
+            "type": "integer",
+            "format": "default",
+            "description": "Numerical progress rating score"
+          },
+          {
+            "name": "phase",
+            "type": "string",
+            "format": "default",
+            "description": "The name of the status phase of the project or challenge"
+          },
+          {
+            "name": "is_challenge",
+            "type": "boolean",
+            "format": "default",
+            "description": "Is this a challenge?"
+          },
+          {
+            "name": "is_webembed",
+            "type": "boolean",
+            "format": "default",
+            "description": "Is the demo link embeddable?"
+          },
+          {
+            "name": "progress",
+            "type": "integer",
+            "format": "default",
+            "description": "The numerical status phase of the project or challenge"
+          },
+          {
+            "name": "summary",
+            "type": "string",
+            "format": "default",
+            "description": "Plain text short project description"
+          },
+          {
+            "name": "hashtag",
+            "type": "string",
+            "format": "default",
+            "description": "A hashtag for this project on social media"
+          },
+          {
+            "name": "image_url",
+            "type": "any",
+            "format": "default",
+            "description": "Link to an image file"
+          },
+          {
+            "name": "source_url",
+            "type": "string",
+            "format": "uri",
+            "description": "Link to the source code"
+          },
+          {
+            "name": "webpage_url",
+            "type": "string",
+            "format": "uri",
+            "description": "Link to the demo or pitch"
+          },
+          {
+            "name": "autotext_url",
+            "type": "string",
+            "format": "uri"
+          },
+          {
+            "name": "download_url",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "contact_url",
+            "type": "string",
+            "format": "uri",
+            "description": "Link for getting in touch with the team"
+          },
+          {
+            "name": "logo_color",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "logo_icon",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "excerpt",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "created_at",
+            "type": "string",
+            "format": "default",
+            "description": "Timestamp of creation of the project"
+          },
+          {
+            "name": "updated_at",
+            "type": "string",
+            "format": "default",
+            "description": "Timestamp of last update to the project"
+          },
+          {
+            "name": "maintainer",
+            "type": "string",
+            "format": "default",
+            "description": "Username of the person who created the project page"
+          },
+          {
+            "name": "event_url",
+            "type": "string",
+            "format": "uri",
+            "description": "A link to the event home page"
+          },
+          {
+            "name": "event_name",
+            "type": "string",
+            "format": "default",
+            "description": "Name of the event at which this project was worked on"
+          },
+          {
+            "name": "category_id",
+            "type": "integer",
+            "format": "default",
+            "description": "ID of the event category this belongs to"
+          },
+          {
+            "name": "category_name",
+            "type": "string",
+            "format": "default",
+            "description": "Event category this belongs to"
+          },
+          {
+            "name": "stats-total",
+            "type": "integer",
+            "format": "default",
+            "description": "Total number of dribs in this project"
+          },
+          {
+            "name": "stats-updates",
+            "type": "integer",
+            "format": "default",
+            "description": "How many times the project was edited"
+          },
+          {
+            "name": "stats-commits",
+            "type": "integer",
+            "format": "default",
+            "description": "How many Git commits project received"
+          },
+          {
+            "name": "stats-during",
+            "type": "integer",
+            "format": "default",
+            "description": "How many updates were made during the event timeline"
+          },
+          {
+            "name": "stats-people",
+            "type": "integer",
+            "format": "default",
+            "description": "How many people were involved or left comments"
+          },
+          {
+            "name": "stats-words",
+            "type": "integer",
+            "format": "default",
+            "description": "Word count of project pitch"
+          },
+          {
+            "name": "stats-allwords",
+            "type": "integer",
+            "format": "default",
+            "description": "Word count of all project texts"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "Initial archive (2020)",
+      "path": "data/dribdat-projects-2020.csv",
       "profile": "tabular-data-resource",
       "format": "csv",
       "mediatype": "text/csv",
@@ -104,8 +321,8 @@
     "opendata", "hackathon"
   ],
   "name": "hackopendata-archive",
-  "description": "Swiss open data hackathon project archive",
-  "title": "hack.opendata.ch project archive",
+  "description": "Swiss open data community hackathon project archive",
+  "title": "Opendata.ch Hackdays project archive",
   "licenses": [
     {
       "title": "CC Attribution-Share Alike 4.0 International",
@@ -114,7 +331,7 @@
   ],
   "sources": [
     {
-      "title": "Generated in dribdat",
+      "title": "Generated using Dribdat",
       "path": "https://dribdat.cc"
     }
   ]
