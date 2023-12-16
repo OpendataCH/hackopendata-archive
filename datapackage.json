@@ -4,7 +4,8 @@
     {
       "path": "data/hackopendata-projects.csv",
       "pathType": "local",
-      "name": "Archive of hack.opendata.ch projects",
+      "title": "Archive of dribdat projects",
+      "name": "projects",
       "format": "csv",
       "mediatype": "text/csv",
       "encoding": "UTF-8",
@@ -211,6 +212,24 @@
             "type": "integer",
             "format": "default",
             "description": "Word count of all project texts"
+          },
+          {
+            "name": "stats-sizetotal",
+            "type": "integer",
+            "format": "default",
+            "description": "Total size of project texts"
+          },
+          {
+            "name": "stats-sizepitch",
+            "type": "integer",
+            "format": "default",
+            "description": "Word count of the pitch section"
+          },
+          {
+            "name": "team_count",
+            "type": "integer",
+            "format": "default",
+            "description": "Number of people in the team"
           }
         ],
         "missingValues": [
@@ -219,100 +238,92 @@
       }
     },
     {
-      "name": "Initial archive (2020)",
-      "path": "data/dribdat-projects-2020.csv",
+      "name": "events",
+      "title": "Archive of dribdat events",
+      "path": "data/events.csv",
       "profile": "tabular-data-resource",
-      "format": "csv",
-      "mediatype": "text/csv",
-      "encoding": "UTF-8",
       "schema": {
         "fields": [
           {
-            "name": "updated",
-            "type": "date",
-            "format": "%d.%m.%y",
-            "description": "Timestamp of last update to the project"
+            "name": "community_url",
+            "type": "any",
+            "format": "default"
           },
           {
-            "name": "url",
+            "name": "ends_at",
             "type": "string",
-            "format": "uri",
-            "description": "A link to the project page"
+            "format": "default"
+          },
+          {
+            "name": "gallery_url",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "has_finished",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "has_started",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "hashtags",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "hostname",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "id",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "location",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "location_lat",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "location_lon",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "logo_url",
+            "type": "string",
+            "format": "default"
           },
           {
             "name": "name",
             "type": "string",
-            "description": "Title of the project page"
+            "format": "default"
           },
           {
-            "name": "score",
-            "type": "integer",
-            "format": "default",
-            "description": "Numerical progress rating score"
-          },
-          {
-            "name": "phase",
+            "name": "starts_at",
             "type": "string",
-            "description": "The name of the status phase of the project or challenge"
-          },
-          {
-            "name": "progress",
-            "type": "integer",
-            "description": "The numerical status phase of the project or challenge"
+            "format": "default"
           },
           {
             "name": "summary",
             "type": "string",
-            "description": "Plain text project description"
-          },
-          {
-            "name": "hashtag",
-            "type": "string",
-            "description": "A hashtag for this project on social media"
-          },
-          {
-            "name": "contact_url",
-            "type": "string",
-            "format": "uri",
-            "description": "Link for getting in touch with the team"
-          },
-          {
-            "name": "image_url",
-            "type": "string",
-            "format": "uri",
-            "description": "Link to an image file"
-          },
-          {
-            "name": "source_url",
-            "type": "string",
-            "format": "uri",
-            "description": "Link to the source code"
+            "format": "default"
           },
           {
             "name": "webpage_url",
             "type": "string",
-            "format": "uri",
-            "description": "Link to the demo or pitch"
-          },
-          {
-            "name": "maintainer",
-            "type": "string",
-            "description": "Username of the person who created the project page"
-          },
-          {
-            "name": "event_url",
-            "type": "string",
-            "format": "uri",
-            "description": "A link to the event home page"
-          },
-          {
-            "name": "event_name",
-            "type": "string",
-            "description": "Name of the event at which this project was worked on"
+            "format": "default"
           }
-        ],
-        "missingValues": [
-          ""
         ]
       }
     }
