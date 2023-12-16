@@ -5,7 +5,7 @@ from requests.exceptions import JSONDecodeError
 INPUT_URLS = 'urls.txt'
 OUTPUT_PROJECTS = 'data/projects.csv'
 OUTPUT_EVENTS = 'data/events.csv'
-MAX_PROJECTS = 10 #0000
+MAX_PROJECTS = 100000
 
 def main():
     with open(INPUT_URLS, 'r') as f:
@@ -42,13 +42,19 @@ def get_datapackage_schema():
     return eventcols, projcols
         
 
-def get_events_projects(url):
+def get_events_projects(urlhost):
     """ Fetches all the events and projects from a Dribdat URL """
     
-    events_data = requests.get(url + '/api/events.json', timeout=5).json()
+    url = 'https://' + urlhost
+    
+    try:
+        events_data = requests.get(url + '/api/events.json', timeout=5).json()
+    except JSONDecodeError:
+        print("!! invalid JSON data, skipping this server")
+        return None, None
     all_events = events_data['events']
     for event in all_events:
-        event['origin'] = url
+        event['origin'] = urlhost
     print('Collecting data from %d events' % len(all_events))
 
     count_total = 0
@@ -72,7 +78,7 @@ def get_events_projects(url):
     all_projects = []
     for pd in project_data:
         for proj in project_data[pd]:
-            proj['origin'] = url
+            proj['origin'] = urlhost
             all_projects.append(proj)
     print('Downloaded a total of %d projects' % len(all_projects))
     
