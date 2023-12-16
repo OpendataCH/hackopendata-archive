@@ -16,6 +16,12 @@
       "schema": {
         "fields": [
           {
+            "name": "origin",
+            "type": "string",
+            "format": "uri",
+            "description": "A link to the server where this project was uploaded"
+          },
+          {
             "name": "id",
             "type": "integer",
             "format": "default"
@@ -244,6 +250,12 @@
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
+          {
+            "name": "origin",
+            "type": "string",
+            "format": "uri",
+            "description": "A link to the server where this event was run"
+          },
           {
             "name": "community_url",
             "type": "any",
