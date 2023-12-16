@@ -12,6 +12,18 @@ Inside the root folder you can find scripts used to generate the data files, and
 
 Please check the Issues, leave us any questions there or in [our forum](https://forum.opendata.ch).
 
+## Updating
+
+Put a file called `urls.txt` in the same folder which contains the domain names of dribdat servers, one per line, e.g.:
+
+```
+now.makezurich.ch
+baselhack.dribdat.cc
+bd.hack4socialgood.ch
+```
+
+Then run `python harvester.py` to update the files in the **data** folder.
+
 ## License
 
 All contents licensed [CC Attribution-Share Alike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/), unless otherwise stated.
