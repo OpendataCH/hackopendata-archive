@@ -2,7 +2,8 @@
   "profile": "tabular-data-package",
   "resources": [
     {
-      "path": "data/hackopendata-projects.csv",
+      "profile": "tabular-data-resource",
+      "path": "data/projects.csv",
       "pathType": "local",
       "title": "Archive of dribdat projects",
       "name": "projects",
@@ -11,7 +12,8 @@
       "encoding": "UTF-8",
       "dialect": {
         "delimiter": ",",
-        "quoteChar": "\""
+        "quoteChar": "\"",
+        "doubleQuote": true
       },
       "schema": {
         "fields": [
@@ -244,10 +246,21 @@
       }
     },
     {
+      "profile": "tabular-data-resource",
       "name": "events",
       "title": "Archive of dribdat events",
       "path": "data/events.csv",
+      "pathType": "local",
       "profile": "tabular-data-resource",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "UTF-8",
+      "dialect": {
+        "delimiter": ",",
+        "quoteChar": "\"",
+        "doubleQuote": true
+      },
+
       "schema": {
         "fields": [
           {
@@ -303,12 +316,12 @@
           },
           {
             "name": "location_lat",
-            "type": "integer",
+            "type": "number",
             "format": "default"
           },
           {
             "name": "location_lon",
-            "type": "integer",
+            "type": "number",
             "format": "default"
           },
           {
