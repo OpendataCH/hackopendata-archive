@@ -1,17 +1,20 @@
 # hackopendata-archive
 
-Collected results of [Opendata.ch Hackdays](https://opendata.ch/projects/hackathons/) and community sprints. 
+The collected results of [Opendata.ch Hackdays](https://opendata.ch/projects/hackathons/) and community sprints. 
 
-## Data source
+We are grateful for all the contributions made by our community over the years, and would like to use this dataset to acknowledge the impact of your work.
 
-The Data Package is currently maintained by hand, with data exported using [dribdat APIs](https://github.com/dribdat/dribdat/blob/main/docs/CONTRIBUTE.md#api-guide).
+## Technical
+
+This is a [Data Package](https://frictionlessdata.io/) created from data exported using the [Dribdat API](https://dribdat.cc/contribute.html#api-guide).
+
+Inside the root folder you can find scripts used to generate the data files, and a `datapackage.json` used for quality control.
 
 In the `export` folder are individual Data Packages of the events.
 
-## TODO
-
-We should create a GitHub Action to fetch and update the CSV files automatically - from all the open data instances that apply the HCoC and CC license. Separate files with a [unified schema](https://github.com/frictionlessdata/frictionlessdata.io/discussions/637) - or single file with a source server column as in the [2020 export](data/dribdat-projects-2020.csv)?
+Please check the Issues, leave us any questions there or in [our forum](https://forum.opendata.ch).
 
 ## License
 
-All contents licensed CC BY 4.0 International
+All contents licensed [CC Attribution-Share Alike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/), unless otherwise stated.
+      
